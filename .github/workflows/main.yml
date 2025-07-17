@@ -53,4 +53,4 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4.2.2
       - name: Build
-        run: compile.sh
+        run: bash compile.sh
