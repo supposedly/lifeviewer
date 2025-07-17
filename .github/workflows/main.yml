@@ -1,9 +1,6 @@
 on:
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: .
 jobs:
   idk:
     runs-on: ubuntu-latest
@@ -49,5 +46,7 @@ jobs:
           #mvn-toolchain-id: # optional
           # Name of Maven Toolchain Vendor if the default name of "${distribution}" is not wanted. See examples of supported syntax in Advanced Usage file
           #mvn-toolchain-vendor: # optional
+      - name: Check out
+        uses: actions/checkout@v4.2.2
       - name: Build
         run: bash build/compile.sh
