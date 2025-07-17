@@ -1,6 +1,10 @@
 on:
   workflow_dispatch:
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./build
 jobs:
   idk:
     runs-on: ubuntu-latest
@@ -49,4 +53,4 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4.2.2
       - name: Build
-        run: bash build/compile.sh
+        run: compile.sh
